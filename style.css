@@ -371,7 +371,6 @@ h3 {
 .service-card,
 .barber-card,
 .booking-form,
-.booking-summary,
 .reservation-card {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -411,7 +410,6 @@ h3 {
 
 .service-card p,
 .barber-card p,
-.booking-summary p,
 .reservation-card p {
   color: var(--muted);
   line-height: 1.6;
@@ -476,13 +474,13 @@ h3 {
 
 .booking-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.8fr);
+  grid-template-columns: minmax(0, 980px);
   gap: 22px;
   align-items: start;
+  justify-content: center;
 }
 
-.booking-form,
-.booking-summary {
+.booking-form {
   padding: clamp(20px, 4vw, 34px);
 }
 
@@ -587,14 +585,6 @@ select option {
 .form-button {
   width: 100%;
   margin-top: 14px;
-}
-
-.booking-summary ul {
-  display: grid;
-  gap: 12px;
-  margin: 24px 0 0;
-  padding-left: 18px;
-  color: var(--muted);
 }
 
 .admin-section {
