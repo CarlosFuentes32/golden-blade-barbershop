@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Golden Blade Barbershop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Volver a la pagina principal">
+      <img class="brand-logo" src="assets/golden-blade-logo.png" alt="Logo Golden Blade Barbershop">
+      <span>Golden Blade</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegacion administrador">
+      <a href="index.html#reservas">Reservas cliente</a>
+      <a href="index.html">Sitio web</a>
+    </nav>
+  </header>
+
+  <main class="admin-shell">
+    <section class="admin-login" id="loginPanel">
+      <div class="barber-crest small" aria-hidden="true">
+        <span class="crest-eye"></span>
+        <span class="crest-eye"></span>
+        <span class="crest-nose"></span>
+        <span class="crest-teeth"></span>
+      </div>
+
+      <p class="eyebrow">Acceso privado</p>
+      <h1>Panel administrador</h1>
+      <p class="admin-hint">Demo: usuario <strong>admin</strong> y clave <strong>1234</strong>.</p>
+
+      <form class="booking-form" id="loginForm" novalidate>
+        <label>
+          Usuario
+          <input type="text" id="adminUser" autocomplete="username" required>
+        </label>
+
+        <label>
+          Clave
+          <input type="password" id="adminPass" autocomplete="current-password" required>
+        </label>
+
+        <p class="form-message" id="loginMessage" role="status"></p>
+        <button class="primary-button form-button" type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <section class="admin-dashboard hidden" id="dashboardPanel">
+      <div class="section-heading">
+        <p class="eyebrow">Gestion interna</p>
+        <h1>Reservas registradas</h1>
+      </div>
+
+      <div class="admin-toolbar">
+        <p id="adminCounter">0 reservas</p>
+        <div class="admin-actions">
+          <button class="secondary-button" id="downloadReservations" type="button">Descargar CSV</button>
+          <button class="secondary-button" id="clearReservations" type="button">Limpiar demo</button>
+          <button class="secondary-button" id="logoutButton" type="button">Salir</button>
+        </div>
+      </div>
+
+      <div class="reservations-list" id="reservationsList" aria-live="polite">
+        <p class="empty-state">Aun no hay reservas registradas.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
