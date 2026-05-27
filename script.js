@@ -99,6 +99,26 @@ const emailConfig = {
   templateId: "template_2rwbebj"
 };
 
+// Elimina restos de una version anterior si el navegador cargo HTML en cache.
+function removeDeprecatedBookingSummary() {
+  const oldTexts = [
+    "Experiencia Golden Blade",
+    "Atencion puntual",
+    "Horarios cada 30 minutos",
+    "Fecha protegida contra dias pasados",
+    "Datos guardados en el navegador"
+  ];
+
+  document.querySelectorAll(".booking-summary, aside").forEach(element => {
+    const text = element.textContent || "";
+    const hasOldText = oldTexts.some(oldText => text.includes(oldText));
+
+    if (hasOldText) {
+      element.remove();
+    }
+  });
+}
+
 // Pinta las tarjetas comerciales de servicios.
 function renderServices() {
   if (!servicesGrid) return;
@@ -564,6 +584,7 @@ if (downloadReservations) {
 }
 
 // Inicializacion general de la demo.
+removeDeprecatedBookingSummary();
 renderServices();
 renderBarbers();
 fillFormOptions();
