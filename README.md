@@ -2,6 +2,10 @@
 
 Demo web profesional para una barberia moderna con reservas online, panel administrador y confirmacion por correo.
 
+## Demo Online
+
+https://carlosfuentes32.github.io/golden-blade-barbershop/
+
 ## Vista General
 
 Golden Blade Barbershop es una landing page orientada a ventas para barberias premium. Incluye una experiencia visual oscura, elegante y responsive, con identidad estilo barbershop, equipo profesional, servicios con precios y un flujo de reserva completo.
@@ -62,4 +66,3 @@ assets/
 - LocalStorage
 - EmailJS
 - GitHub Pages
-
